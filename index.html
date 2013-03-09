@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ca.nicolasporter.resume">
+  <head>
+    <title>Nicolas Porter | Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta charset="utf-8"/>
+    <link href="/assets/css/default.css" rel="stylesheet"/>
+    <script src="/assets/js/libs/angular.js"></script>
+    <script src="/assets/js/libs/lodash.js"></script>
+    <script src="/assets/js/libs/zepto.js"></script>
+    <script src="/assets/js/app/app.js"></script>
+    <script src="/assets/js/app/services/experiences-service.js"></script>
+    <script src="/assets/js/app/services/technologies-service.js"></script>
+    <script src="/assets/js/app/controllers/main-controller.js"></script>
+    <script src="/assets/js/app/controllers/experiences-controller.js"></script>
+    <script src="/assets/js/app/controllers/technologies-controller.js"></script>
+    <script src="/assets/js/app/directives/task-directive.js"></script>
+  </head>
+  <body ng-controller="MainController">
+    <header>
+      <article class="contact-info vcard">
+        <div class="name fn n"><span class="first-name given-name">Nicolas</span><span class="last-name family-name"> Porter</span></div>
+        <div class="title">Full Stack Web Developer</div>
+        <div class="address adr">
+          <div class="row">
+            <div class="street-address">1911 Venus Avenue</div>
+            <div class="city locality">Ottawa</div>
+          </div>
+          <div class="row">
+            <div class="province region">ON</div>
+            <div class="postal-code">K4A 4H5</div>
+          </div>
+          <div class="row">
+            <div class="country">Canada</div>
+          </div>
+        </div>
+        <div class="contact-methods"><a href="mailto:porter.nicolas@gmail.com" class="contact contact-email"><i class="email">
+              <div data-short="email" data-normal="yo@nicolasporter.ca" class="details"></div></i></a><a href="//github.com/surjikal" target="_blank" class="contact contact-github"><i class="github">
+              <div data-short="github" data-normal="github.com/surjikal" class="details"></div></i></a><a href="//twitter.com/surjikal" target="_blank" class="contact contact-twitter"><i class="twitter">
+              <div data-short="twitter" data-normal="twitter.com/surjikal" class="details"></div></i></a><a href="tel:16134132048" class="contact contact-number phone-number tel"><i class="phone-number">
+              <div data-short="telephone" data-normal="+1 613 413 2048" class="details"></div></i></a>
+        </div>
+      </article>
+    </header>
+    <article class="content">
+      <section ng-controller="TechnologiesController" class="technologies">
+        <h1>Technologies</h1>
+        <ul ng-repeat="group in technologies">
+          <li ng-repeat="technology in group" ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}" class="technology">{{technology}}</li>
+        </ul>
+      </section>
+      <section ng-controller="ExperiencesController" class="experiences">
+        <article ng-repeat="experience in experiences" class="experience">
+          <header ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))" ng-mouseleave="setSelectedTechnologies([])">
+            <h1 class="location">{{experience.location}}</h1>
+            <h2 class="position">{{experience.position}}</h2>
+          </header>
+          <ul class="terms">
+            <li ng-repeat="term in experience.terms" ng-mouseenter="setSelectedTechnologies(term.technologies)" ng-mouseleave="setSelectedTechnologies([])" class="term">
+              <div class="duration">
+                <div class="start">{{term.duration.start}}</div>
+                <div class="stop">{{term.duration.stop}}</div>
+              </div>
+              <ul class="tasks">
+                <li ng-repeat="task in term.tasks" class="task">{{task.description || task}}</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="projects">
+        <h1>Projects &amp; Hobbies</h1>
+        <ul>
+          <li>
+            <h2>Sketchy</h2>
+            <p>A puzzle game where you indirectly control a stickman by drawing on the game world</p>
+          </li>
+          <li>
+            <h2>Music Production</h2>
+            <p>Electric guitar player (~10 years), electronic music composition.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="education">
+        <h1>Education</h1>
+        <div class="location">Carleton University - Ottawa, Canada</div>
+        <div class="degree">Bachelor Computer Science</div>
+      </section>
+    </article>
+  </body>
+</html>

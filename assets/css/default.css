@@ -1,0 +1,423 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,500,600,700);
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../../../src/styles/_base.scss */
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-text-size-adjust: none;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+/* line 16, ../../../src/styles/_base.scss */
+li {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
+/* line 2, ../../../src/styles/_layout.scss */
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 8, ../../../src/styles/_layout.scss */
+html {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* line 13, ../../../src/styles/_layout.scss */
+body {
+  padding: 20px;
+}
+/* line 16, ../../../src/styles/_layout.scss */
+body > header {
+  width: 100%;
+}
+/* line 20, ../../../src/styles/_layout.scss */
+body .content > section {
+  margin: 30px 0;
+}
+
+/* line 2, ../../../src/styles/modules/_contact_info.scss */
+.contact-info {
+  position: relative;
+  width: 100%;
+}
+/* line 6, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .name {
+  display: inline;
+  position: relative;
+  left: -1px;
+}
+/* line 12, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+/* line 17, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods .contact {
+  line-height: 16px;
+}
+/* line 20, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods .contact i {
+  display: block;
+}
+/* line 23, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods .contact i:hover .details {
+  color: white;
+}
+/* line 27, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods .contact i .details {
+  display: block;
+  text-align: right;
+  font-weight: 300;
+  font-size: 12px;
+}
+/* line 33, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods .contact i .details:after {
+  content: attr(data-normal);
+}
+@media only screen and (max-width: 350px) {
+  /* line 33, ../../../src/styles/modules/_contact_info.scss */
+  .contact-info .contact-methods .contact i .details:after {
+    content: attr(data-short);
+  }
+}
+/* line 43, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .contact-methods i:after {
+  content: '' !important;
+}
+/* line 48, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .address {
+  display: none;
+}
+/* line 51, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .address .row > * {
+  display: inline;
+}
+/* line 55, ../../../src/styles/modules/_contact_info.scss */
+.contact-info .address .street-address:after {
+  content: ', ';
+}
+
+/* line 2, ../../../src/styles/modules/_skills.scss */
+.skills {
+  overflow: hidden;
+}
+/* line 5, ../../../src/styles/modules/_skills.scss */
+.skills .skill {
+  display: inline-block;
+  width: 32%;
+  float: left;
+}
+/* line 10, ../../../src/styles/modules/_skills.scss */
+.skills .skill:not(:last-child) {
+  margin-right: 2%;
+}
+
+/* line 2, ../../../src/styles/modules/_technologies.scss */
+.technologies {
+  overflow: hidden;
+}
+/* line 5, ../../../src/styles/modules/_technologies.scss */
+.technologies ul {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  font-size: 14px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 450px) {
+  /* line 5, ../../../src/styles/modules/_technologies.scss */
+  .technologies ul {
+    min-width: 50%;
+  }
+}
+/* line 16, ../../../src/styles/modules/_technologies.scss */
+.technologies ul li {
+  margin-bottom: 8px;
+}
+
+/* line 4, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience {
+  padding-bottom: 15px;
+}
+/* line 10, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience:last-child {
+  padding-bottom: 0;
+}
+/* line 14, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience:first-child header {
+  padding: 0;
+}
+/* line 18, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience header {
+  border-bottom: 1px solid #333;
+  padding: 15px 0 0 0;
+  position: relative;
+}
+/* line 29, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience header .location, .experiences .experience header .position {
+  display: inline;
+}
+/* line 33, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience header .location {
+  margin-right: 10px;
+}
+/* line 37, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience header .position {
+  line-height: 18px;
+}
+/* line 41, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience header .duration {
+  line-height: 25px;
+}
+@media only screen and (max-width: 450px) {
+  /* line 41, ../../../src/styles/modules/_experiences.scss */
+  .experiences .experience header .duration {
+    line-height: 20px;
+  }
+}
+/* line 50, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .duration {
+  font-size: 12px;
+}
+/* line 53, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .duration .start, .experiences .experience .duration .stop {
+  display: inline;
+}
+/* line 57, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .duration .start:after {
+  content: ' –';
+  margin: 0 5px;
+}
+/* line 63, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .term {
+  font-size: 13px;
+  height: auto;
+}
+/* line 68, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .term .duration {
+  line-height: normal;
+  height: 100%;
+}
+/* line 74, ../../../src/styles/modules/_experiences.scss */
+.experiences .experience .task {
+  line-height: 15px;
+  margin-top: 7px;
+}
+
+/* line 2, ../../../src/styles/modules/_projects.scss */
+.projects {
+  overflow: hidden;
+}
+/* line 5, ../../../src/styles/modules/_projects.scss */
+.projects ul {
+  display: inline-block;
+  float: left;
+}
+/* line 9, ../../../src/styles/modules/_projects.scss */
+.projects ul li {
+  margin-bottom: 8px;
+}
+
+/* line 8, ../../../src/styles/_theme.scss */
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: #262626;
+  color: #e6e6e6;
+}
+
+/* line 16, ../../../src/styles/_theme.scss */
+a {
+  text-decoration: none;
+  color: #9999ff;
+}
+
+/* line 21, ../../../src/styles/_theme.scss */
+li {
+  list-style: none;
+  padding-left: 1em;
+  text-indent: -1em;
+  font-size: 13px;
+}
+/* line 30, ../../../src/styles/_theme.scss */
+li:before {
+  content: '❯';
+  color: #444;
+  font-size: 9px;
+  padding-right: 7px;
+  padding-left: 2px;
+  position: relative;
+  top: -1px;
+}
+
+/* line 41, ../../../src/styles/_theme.scss */
+h1 {
+  font-weight: 300;
+}
+
+/* line 45, ../../../src/styles/_theme.scss */
+.name {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+/* line 50, ../../../src/styles/_theme.scss */
+.title {
+  font-weight: 300;
+}
+
+/* line 55, ../../../src/styles/_theme.scss */
+.content h1 {
+  font-size: 18px;
+}
+/* line 59, ../../../src/styles/_theme.scss */
+.content h2 {
+  font-weight: 200;
+}
+
+/* line 64, ../../../src/styles/_theme.scss */
+.technologies, .experience {
+  cursor: text;
+}
+
+/* line 71, ../../../src/styles/_theme.scss */
+.experience header, .experience .duration {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+/* line 75, ../../../src/styles/_theme.scss */
+.experience .duration {
+  color: #777;
+}
+/* line 79, ../../../src/styles/_theme.scss */
+.experience:hover header {
+  color: #9999ff;
+}
+
+/* line 86, ../../../src/styles/_theme.scss */
+.experience:hover .term:only-child .duration,
+.term:hover .duration {
+  color: rgba(153, 153, 255, 0.6);
+}
+
+/* line 91, ../../../src/styles/_theme.scss */
+.projects li, .experiences .term {
+  padding-left: 0;
+  text-indent: 0;
+}
+/* line 95, ../../../src/styles/_theme.scss */
+.projects li:before, .experiences .term:before {
+  content: '';
+}
+
+/* line 100, ../../../src/styles/_theme.scss */
+.technology {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+/* line 103, ../../../src/styles/_theme.scss */
+.technology.selected {
+  color: #9999ff;
+}
+
+@media print {
+  /* line 2, ../../../src/styles/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 13, ../../../src/styles/_print.scss */
+  .duration {
+    color: #444 !important;
+  }
+
+  /* line 17, ../../../src/styles/_print.scss */
+  li:before {
+    color: #444 !important;
+  }
+}
