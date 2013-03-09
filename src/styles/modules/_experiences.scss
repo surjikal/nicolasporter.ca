@@ -1,0 +1,79 @@
+
+.experiences {
+
+    .experience {
+
+        // We want 15px of extra hover area around this element
+        // This takes care of the bottom part.
+        padding-bottom: 15px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &:first-child header {
+            padding: 0;
+        }
+
+        header {
+            border-bottom: 1px solid #333;
+
+            // This takes care of the top part. Normally, I'd do
+            // this in the parent element, but in this case, I
+            // specifically want to increase the area of the header
+            // because it behaves differently than hovering over a
+            // term.
+            padding: 15px 0 0 0;
+            position: relative;
+
+            .location, .position {
+                display: inline;
+            }
+
+            .location {
+                margin-right: 10px;
+            }
+
+            .position {
+                line-height: 18px;
+            }
+
+            .duration {
+                line-height: 25px;
+
+                @media only screen and (max-width: 450px) {
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .duration {
+            font-size: 12px;
+
+            .start, .stop {
+                display: inline;
+            }
+
+            .start:after {
+                content: ' –';
+                margin: 0 5px;
+            }
+        }
+
+        .term {
+
+            font-size: 13px;
+            height: auto;
+
+            .duration {
+                line-height: normal;
+                height: 100%;
+            }
+        }
+
+        .task {
+            line-height: 15px;
+            margin-top: 7px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+
+.contact-info {
+    position: relative;
+    width: 100%;
+
+    .name {
+        display: inline;
+        position: relative;
+        left: -1px;
+    }
+
+    .contact-methods {
+        position: absolute;
+        top: 3px;
+        right: 0;
+
+        .contact {
+            line-height: 16px;
+
+            i {
+                display: block;
+
+                &:hover .details {
+                    color: white;
+                }
+
+                .details {
+                    display: block;
+                    text-align: right;
+                    font-weight: 300;
+                    font-size: 12px;
+
+                    &:after {
+                        content: attr(data-normal);
+                        @media only screen and (max-width: 350px) {
+                            content: attr(data-short);
+                        }
+                    }
+                }
+            }
+        }
+
+        i:after {
+            content: '' !important;
+        }
+    }
+
+    .address {
+        display: none;
+
+        .row > * {
+            display: inline;
+        }
+
+        .street-address:after {
+            content: ', ';
+        }
+    }
+}

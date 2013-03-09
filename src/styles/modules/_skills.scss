@@ -1,0 +1,14 @@
+
+.skills {
+    overflow: hidden;
+
+    .skill {
+        display: inline-block;
+        width: 32%;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: 2%;
+        }
+    }
+}

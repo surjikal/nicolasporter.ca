@@ -1,0 +1,13 @@
+
+.projects {
+    overflow: hidden;
+
+    ul {
+        display: inline-block;
+        float: left;
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+}

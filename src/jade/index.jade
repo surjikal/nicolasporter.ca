@@ -1,0 +1,156 @@
+
+include mixins/asset-mixins
+include mixins/asset-mixins-angular
+
+
+!!!
+html(lang='en', ng-app='ca.nicolasporter.resume')
+
+  head
+    title Nicolas Porter | Resume
+
+    block meta
+      include includes/mobile-meta-tags
+      meta(charset="utf-8")
+
+    block css
+      mixin css("default")
+
+    block js-libs
+      mixin js-lib("angular")
+      mixin js-lib("lodash")
+      mixin js-lib("zepto")
+
+    block app
+      mixin app-core("app")
+
+      mixin app-service("experiences")
+      mixin app-service("technologies")
+
+      mixin app-controller("main")
+      mixin app-controller("experiences")
+      mixin app-controller("technologies")
+
+      mixin app-directive("task")
+
+    //- :coffeescript
+    //-   cycleHue = (interval, increment, hue, callback) ->
+    //-     cycle = ->
+    //-       hue = (hue + increment) % 360
+    //-       callback hue
+    //-     setInterval cycle, interval
+
+    //-   $ ->
+    //-     $coloredElements = $('h1, .name, a, .selected')
+    //-     cycleHue 100, 1, 120, (hue) ->
+    //-       $coloredElements.css color:"hsl(#{hue}, 80%, 70%)"
+
+  body(ng-controller="MainController")
+    header
+
+      //- Using vcard classes as well as my own
+      article.contact-info.vcard
+
+        .name.fn.n
+          span.first-name.given-name Nicolas
+          span.last-name.family-name  Porter
+
+        .title Full Stack Web Developer
+
+        .address.adr
+          .row
+            .street-address 1911 Venus Avenue
+            .city.locality Ottawa
+          .row
+            .province.region ON
+            .postal-code K4A 4H5
+          .row
+            .country Canada
+
+        .contact-methods
+
+          a.contact.contact-email(href="mailto:porter.nicolas@gmail.com")
+            i.email
+              .details(data-short="email", data-normal="yo@nicolasporter.ca")
+
+          a.contact.contact-github(href="//github.com/surjikal", target="_blank")
+            i.github
+              .details(data-short="github", data-normal="github.com/surjikal")
+
+          a.contact.contact-twitter(href="//twitter.com/surjikal", target="_blank")
+            i.twitter
+              .details(data-short="twitter", data-normal="twitter.com/surjikal")
+
+          a.contact.contact-number.phone-number.tel(href="tel:16134132048")
+            i.phone-number
+              .details(data-short="telephone", data-normal="+1 613 413 2048")
+
+          //- .phone-number.tel(data-country-code="US")
+          //-   | +1 613 413 2048
+
+          //- .phone-number.tel(data-country-code="CA")
+          //-   | +1 702 605 4096
+
+    article.content
+
+      section.technologies(ng-controller="TechnologiesController")
+        h1 Technologies
+        ul(ng-repeat="group in technologies")
+          li.technology(ng-repeat="technology in group"
+            ,ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}")
+            | {{technology}}
+
+        //-   li JavaScript
+        //-   li AngularJS
+        //-   li Backbone
+        //-   li jQuery, Zepto
+        //- ul
+        //-   li Node.js, Express
+        //-   li MongoDB
+        //-   li HTML, Jade
+        //-   li CSS, Sass, Compass
+        //- ul
+        //-   li Python
+        //-   li Django
+        //-   li Nginx
+        //-   li Git
+        //- ul
+        //-   li GNU/Linux
+        //-   li Bash, Zsh
+        //-   li Java
+        //-   li C++, QT, OpenGL
+
+      section.experiences(ng-controller="ExperiencesController")
+
+        article.experience(ng-repeat="experience in experiences")
+
+          header(ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))"
+                ,ng-mouseleave="setSelectedTechnologies([])")
+            h1.location {{experience.location}}
+            h2.position {{experience.position}}
+
+          ul.terms
+            li.term(ng-repeat="term in experience.terms"
+                   ,ng-mouseenter="setSelectedTechnologies(term.technologies)"
+                   ,ng-mouseleave="setSelectedTechnologies([])")
+              .duration
+                .start {{term.duration.start}}
+                .stop {{term.duration.stop}}
+              ul.tasks
+                li.task(ng-repeat="task in term.tasks")
+                  | {{task.description || task}}
+
+      section.projects
+        h1 Projects &amp; Hobbies
+        ul
+          li
+            h2 Sketchy
+            p A puzzle game where you indirectly control a stickman by drawing on the game world
+          li
+            h2 Music Production
+            p Electric guitar player (~10 years), electronic music composition.
+
+      section.education
+        h1 Education
+        .location Carleton University - Ottawa, Canada
+        .degree Bachelor Computer Science
