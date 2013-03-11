@@ -13,47 +13,34 @@
         position: absolute;
         top: 3px;
         right: 0;
+        left: 0;
+        overflow: hidden;
 
-        .contact {
-            line-height: 16px;
+        li {
+            text-align: right;
+            white-space: nowrap;
 
-            i {
-                display: block;
+            a {
+                line-height: 19px;
 
-                &:hover .details {
-                    color: white;
-                }
-
-                .details {
-                    display: block;
-                    text-align: right;
-                    font-weight: 300;
-                    font-size: 12px;
+                @media only screen and (max-width: 350px) {
+                    visibility: hidden;
 
                     &:after {
-                        content: attr(data-normal);
-                        @media only screen and (max-width: 350px) {
-                            content: attr(data-short);
-                        }
+                        visibility: visible;
+                        content: attr(data-content-narrow);
                     }
                 }
             }
         }
 
-        i:after {
-            content: '' !important;
+        .contact-method {
+
+
         }
     }
 
     .address {
         display: none;
-
-        .row > * {
-            display: inline;
-        }
-
-        .street-address:after {
-            content: ', ';
-        }
     }
 }

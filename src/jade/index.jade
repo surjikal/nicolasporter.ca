@@ -33,63 +33,58 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
 
       mixin app-directive("task")
 
-    //- :coffeescript
-    //-   cycleHue = (interval, increment, hue, callback) ->
-    //-     cycle = ->
-    //-       hue = (hue + increment) % 360
-    //-       callback hue
-    //-     setInterval cycle, interval
-
-    //-   $ ->
-    //-     $coloredElements = $('h1, .name, a, .selected')
-    //-     cycleHue 100, 1, 120, (hue) ->
-    //-       $coloredElements.css color:"hsl(#{hue}, 80%, 70%)"
 
   body(ng-controller="MainController")
-    header
 
-      //- Using vcard classes as well as my own
+    header
+      //- The obscure classes are due to the `vcard` format.
+      //- I'm adding extra classes to make this more readable.
+      //- See `http://microformats.org/wiki/hcard` for more details
       article.contact-info.vcard
 
-        .name.fn.n
-          span.first-name.given-name Nicolas
-          span.last-name.family-name  Porter
+        h1.name.fn
+          | Nicolas Porter
 
-        .title Full Stack Web Developer
+        h2.title
+          | Full Stack Web Developer
 
         .address.adr
-          .row
-            .street-address 1911 Venus Avenue
-            .city.locality Ottawa
-          .row
-            .province.region ON
-            .postal-code K4A 4H5
-          .row
-            .country Canada
+            .street-address
+              | 1911 Venus Avenue
+            .locality
+              | Ottawa
+            .region
+              | ON
+            .postal-code
+              | K4A 4H5
+            .country
+              | Canada
 
-        .contact-methods
 
-          a.contact.contact-email(href="mailto:porter.nicolas@gmail.com")
-            i.email
-              .details(data-short="email", data-normal="yo@nicolasporter.ca")
+        ul.contact-methods.list-unstyled
 
-          a.contact.contact-github(href="//github.com/surjikal", target="_blank")
-            i.github
-              .details(data-short="github", data-normal="github.com/surjikal")
+          li: a.contact-method.contact-method-email.email(
+            href="mailto:porter.nicolas@gmail.com"
+          , data-content-narrow="email")
+            | yo@nicolasporter.ca
 
-          a.contact.contact-twitter(href="//twitter.com/surjikal", target="_blank")
-            i.twitter
-              .details(data-short="twitter", data-normal="twitter.com/surjikal")
+          li: a.contact-method.contact-method-github(
+            target="_blank"
+          , href="https://github.com/surjikal"
+          , data-content-narrow="github")
+            | github.com/surjikal
 
-          a.contact.contact-number.phone-number.tel(href="tel:16134132048")
-            i.phone-number
-              .details(data-short="telephone", data-normal="+1 613 413 2048")
+          li: a.contact-method.contact-method-twitter(
+            target="_blank"
+          , href="https://twitter.com/surjikal"
+          , data-content-narrow="twitter")
+            | twitter.com/surjikal
 
-          //- .phone-number.tel(data-country-code="US")
-          //-   | +1 613 413 2048
+          li: a.contact-method.contact-method-phone.tel(
+            href="tel:16134132048"
+          , data-content-narrow="telephone")
+            | +1 613 413 2048
 
-          //- .phone-number.tel(data-country-code="CA")
-          //-   | +1 702 605 4096
 
     article.content
 
@@ -100,36 +95,16 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
             ,ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}")
             | {{technology}}
 
-        //-   li JavaScript
-        //-   li AngularJS
-        //-   li Backbone
-        //-   li jQuery, Zepto
-        //- ul
-        //-   li Node.js, Express
-        //-   li MongoDB
-        //-   li HTML, Jade
-        //-   li CSS, Sass, Compass
-        //- ul
-        //-   li Python
-        //-   li Django
-        //-   li Nginx
-        //-   li Git
-        //- ul
-        //-   li GNU/Linux
-        //-   li Bash, Zsh
-        //-   li Java
-        //-   li C++, QT, OpenGL
 
       section.experiences(ng-controller="ExperiencesController")
 
         article.experience(ng-repeat="experience in experiences")
-
           header(ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))"
                 ,ng-mouseleave="setSelectedTechnologies([])")
             h1.location {{experience.location}}
             h2.position {{experience.position}}
 
-          ul.terms
+          ul.terms.list-unstyled
             li.term(ng-repeat="term in experience.terms"
                    ,ng-mouseenter="setSelectedTechnologies(term.technologies)"
                    ,ng-mouseleave="setSelectedTechnologies([])")
@@ -140,17 +115,25 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
                 li.task(ng-repeat="task in term.tasks")
                   | {{task.description || task}}
 
+
       section.projects
         h1 Projects &amp; Hobbies
-        ul
+        ul.list-unstyled
+
           li
             h2 Sketchy
-            p A puzzle game where you indirectly control a stickman by drawing on the game world
+            p A puzzle game where you indirectly control a stickman by drawing on the game world.
+            a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk") View on YouTube
+
           li
             h2 Music Production
-            p Electric guitar player (~10 years), electronic music composition.
+            p Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
+            a(href="https://soundcloud.com/surjikal") Listen on SoundCloud
+
 
       section.education
         h1 Education
-        .location Carleton University - Ottawa, Canada
-        .degree Bachelor Computer Science
+        .degree
+          | Bachelor of Computer Science
+        .location
+          | Carleton University, Ottawa, Canada

@@ -12,8 +12,3 @@
     // Making the box model not suck
     @include box-sizing(border-box !important);
 }
-
-li {
-    list-style-position: inside;
-    list-style-type: circle;
-}

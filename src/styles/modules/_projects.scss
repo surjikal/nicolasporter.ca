@@ -1,13 +1,36 @@
 
 .projects {
-    overflow: hidden;
 
-    ul {
-        display: inline-block;
-        float: left;
+    p {
+        line-height: 15px;
+    }
 
-        li {
-            margin-bottom: 8px;
+    a {
+        line-height: 18px;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    // a {
+    //     display: block;
+    //     color: $font-color-normal;
+
+    //     &:hover:after {
+    //         content: attr(href);
+    //         margin-left: 10px;
+    //         font-size: 12px;
+    //         font-style: italic;
+    //         color: $font-color-highlight;
+    //     }
+    // }
+
+    h2 {
+        // display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        &:first-child {
+            margin-top: 0;
         }
     }
 }

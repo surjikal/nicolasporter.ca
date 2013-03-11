@@ -70,7 +70,7 @@ app.service 'experiences', -> [
       start: 'April 2010'
       stop:  'September 2010'
     tasks: [
-      "Python and Django development on web app for one of the biggest restaurant chains in the US"
+      "Python and Django development on web app for one of the largest restaurant chains in the US"
     ]
     technologies: [
       "Git", "Python, Django", "GNU/Linux", "Bash, Zsh"

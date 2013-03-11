@@ -84,10 +84,14 @@ module.exports = (grunt) ->
                 fonts: 'src/fonts'
                 relativeassets: true
                 linecomments: true
+                # This should enable source maps for sass, but it doesn't work for me.
+                # debugsass: true
+                # outputstyle: 'nested'
 
 
         # Create HTTP Server on a directory
         connect:
+            debug: true
             port: 8000
             base: ->
                 grunt.config.get 'config.build_directory'

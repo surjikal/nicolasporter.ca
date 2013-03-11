@@ -8,38 +8,50 @@ $font-color-highlight: hsl(240, 100%, 80%);
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
+    font-size: 13px;
 
     background: hsl(0, 0%, 15%);
     color: $font-color-normal;
 }
 
-a {
+a, a:after {
     text-decoration: none;
     color: $font-color-highlight;
+    border-bottom: 1px dotted rgba($font-color-highlight, 0.4);
+
+    &:hover {
+        $color: lighten($font-color-highlight, 15%);
+        border-bottom: 1px dotted rgba($color, 0.3);
+        color: $color;
+    }
 }
 
-li {
+ul > li {
     list-style: none;
 
     // Fixes bad indentation on content wrap
     padding-left: 1em;
     text-indent: -1em;
 
-    font-size: 13px;
-
     &:before {
         content: '❯';
-        color: #444;
+        color: #666;
         font-size: 9px;
-        padding-right: 7px;
+        padding-right: 6px;
         padding-left: 2px;
         position: relative;
         top: -1px;
     }
 }
 
-h1 {
-    font-weight: 300;
+ul.list-unstyled > li {
+    padding-left: 0;
+    text-indent: 0;
+
+   &:before {
+        content: '';
+        position: static;
+    }
 }
 
 .name {
@@ -52,19 +64,30 @@ h1 {
 }
 
 .content {
+
     h1 {
         font-size: 18px;
+        font-weight: 300;
     }
 
     h2 {
         font-weight: 200;
+        font-size: 15px;
     }
 }
 
+.contact-method {
+    font-size: 12px;
+}
+
+// Prevents mouse cursor flickering from `normal` to `text`
 .technologies, .experience {
     cursor: text;
 }
 
+.experience header, .technologies h1, .projects h1, .education h1 {
+    border-bottom: 1px solid #333;
+}
 
 .experience {
 
@@ -74,6 +97,11 @@ h1 {
 
     .duration {
         color: #777;
+        font-size: 12px;
+    }
+
+    .term {
+        font-size: 13px;
     }
 
     &:hover header {
@@ -81,21 +109,11 @@ h1 {
     }
 }
 
-
 .experience:hover .term:only-child .duration,
 .term:hover .duration {
-    color: rgba($font-color-highlight, 0.6);
+    color: rgba($font-color-highlight, 0.7);
 }
 
-
-.projects li, .experiences .term {
-    padding-left: 0;
-    text-indent: 0;
-
-    &:before {
-        content: '';
-    }
-}
 
 .technology {
     @include transition(color 0.5s);
@@ -105,5 +123,15 @@ h1 {
     }
 }
 
+.education {
 
+    .degree {
+        font-size: 15px;
+    }
 
+    .location {
+        font-size: 12px;
+        // color: #777;
+        font-style: italic;
+    }
+}

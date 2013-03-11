@@ -16,13 +16,11 @@
         }
 
         header {
-            border-bottom: 1px solid #333;
 
             // This takes care of the top part. Normally, I'd do
             // this in the parent element, but in this case, I
             // specifically want to increase the area of the header
-            // because it behaves differently than hovering over a
-            // term.
+            // because it behaves differently than hovering over a term.
             padding: 15px 0 0 0;
             position: relative;
 
@@ -48,7 +46,6 @@
         }
 
         .duration {
-            font-size: 12px;
 
             .start, .stop {
                 display: inline;
@@ -61,8 +58,6 @@
         }
 
         .term {
-
-            font-size: 13px;
             height: auto;
 
             .duration {
