@@ -88,7 +88,7 @@ ul.list-unstyled > li {
 }
 
 .experience header, .technologies h1, .projects h1, .education h1 {
-    border-bottom: 1px solid rgba($font-color-highlight, 0.2);
+    border-bottom: 1px solid $font-color-dark;
 }
 
 .experience {
