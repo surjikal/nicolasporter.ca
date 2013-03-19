@@ -111,11 +111,14 @@ body .content > section {
   margin: 30px 0;
 }
 
-/* line 27, ../../../src/styles/_layout.scss */
-.experiences .experience > header,
-.projects > h1,
-.technologies > h1 {
+/* line 25, ../../../src/styles/_layout.scss */
+.projects > h1, .technologies > h1 {
   margin-bottom: 10px;
+}
+
+/* line 29, ../../../src/styles/_layout.scss */
+.experiences .term:first-child {
+  padding-top: 10px;
 }
 
 /* line 10, ../../../src/styles/_theme.scss */
