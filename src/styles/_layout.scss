@@ -22,8 +22,10 @@ body {
 }
 
 
-.experiences .experience > header,
-.projects > h1,
-.technologies > h1 {
+.projects > h1, .technologies > h1 {
     margin-bottom: 10px;
+}
+
+.experiences .term:first-child {
+    padding-top: 10px;
 }
