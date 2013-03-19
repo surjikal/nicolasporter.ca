@@ -201,7 +201,7 @@ ul.list-unstyled > li:before {
 
 /* line 90, ../../../src/styles/_theme.scss */
 .experience header, .technologies h1, .projects h1, .education h1 {
-  border-bottom: 1px solid rgba(153, 153, 255, 0.2);
+  border-bottom: 1px solid #494950;
 }
 
 /* line 96, ../../../src/styles/_theme.scss */
