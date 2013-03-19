@@ -1,36 +1,16 @@
 
 .projects {
 
+    .project {
+        display: block;
+    }
+
+    .project {
+        margin-top: 15px;
+    }
+
     p {
-        line-height: 15px;
-    }
-
-    a {
-        line-height: 18px;
-        font-size: 12px;
-        font-style: italic;
-    }
-
-    // a {
-    //     display: block;
-    //     color: $font-color-normal;
-
-    //     &:hover:after {
-    //         content: attr(href);
-    //         margin-left: 10px;
-    //         font-size: 12px;
-    //         font-style: italic;
-    //         color: $font-color-highlight;
-    //     }
-    // }
-
-    h2 {
-        // display: inline-block;
         margin-top: 5px;
-        margin-bottom: 5px;
-
-        &:first-child {
-            margin-top: 0;
-        }
+        line-height: 15px;
     }
 }

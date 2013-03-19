@@ -1,20 +1,60 @@
 @media print {
     * {
-        background: transparent !important;
         color: black !important;
+        background: transparent !important;
         text-shadow: none !important;
-        @include filter(none !important);
+        @include filter(none);
     }
 
+    html, body {
+        margin: 0.5cm auto;
+        width: 6.5in;
+    }
+
+    .projects {
+        page-break-before: always;
+        padding-top: 2cm;
+    }
+
+    // body {
+    //     position: absolute;
+    //     left: 2.5cm;
+    //     right: 2.5cm;
+    //     bottom: 2.5cm;
+    //     top: 2.5cm;
+    //     width: auto;
+    // }
+
     @page {
-        margin: 0.5cm;
+        margin: 1in;
     }
 
     .duration {
-        color: #444 !important;
+        color: #444;
     }
 
     li:before {
-        color: #444 !important;
+        color: #444;
+    }
+
+    header, h1 {
+        border: none !important;
+    }
+
+    a {
+        color: black;
+        border: none;
+    }
+
+    .duration {
+        font-size: 10px;
+        font-style: italic;
+    }
+
+    .projects {
+
+        h2 {
+            font-size: 14px;
+        }
     }
 }

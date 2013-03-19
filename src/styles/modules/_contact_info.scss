@@ -16,9 +16,15 @@
         left: 0;
         overflow: hidden;
 
-        li {
+        .contact-method {
             text-align: right;
             white-space: nowrap;
+
+            @media print, screen and (min-width: 450px) {
+                &:nth-child(odd) {
+                    float: right;
+                }
+            }
 
             a {
                 line-height: 19px;

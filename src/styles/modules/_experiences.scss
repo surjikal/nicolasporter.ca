@@ -16,7 +16,6 @@
         }
 
         header {
-
             // This takes care of the top part. Normally, I'd do
             // this in the parent element, but in this case, I
             // specifically want to increase the area of the header
@@ -46,7 +45,6 @@
         }
 
         .duration {
-
             .start, .stop {
                 display: inline;
             }
@@ -57,11 +55,13 @@
             }
         }
 
-        .term {
-            height: auto;
+        .term + .term {
+            padding-top: 15px;
+        }
 
+        .term {
             .duration {
-                line-height: normal;
+                line-height: 1;
                 height: 100%;
             }
         }

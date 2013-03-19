@@ -60,27 +60,26 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
             .country
               | Canada
 
-
         ul.contact-methods.list-unstyled
 
-          li: a.contact-method.contact-method-email.email(
-            href="mailto:porter.nicolas@gmail.com"
-          , data-content-narrow="email")
-            | yo@nicolasporter.ca
-
-          li: a.contact-method.contact-method-github(
+          li.contact-method.contact-method-github: a(
             target="_blank"
           , href="https://github.com/surjikal"
           , data-content-narrow="github")
             | github.com/surjikal
 
-          li: a.contact-method.contact-method-twitter(
+          li.contact-method.contact-method-email: a.email(
+            href="mailto:porter.nicolas@gmail.com"
+          , data-content-narrow="email")
+            | yo@nicolasporter.ca
+
+          li.contact-method.contact-method-twitter: a(
             target="_blank"
           , href="https://twitter.com/surjikal"
           , data-content-narrow="twitter")
             | twitter.com/surjikal
 
-          li: a.contact-method.contact-method-phone.tel(
+          li.contact-method.contact-method-phone: a.tel(
             href="tel:16134132048"
           , data-content-narrow="telephone")
             | +1 613 413 2048
@@ -118,22 +117,36 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
 
       section.projects
         h1 Projects &amp; Hobbies
+
         ul.list-unstyled
 
-          li
-            h2 Sketchy
-            p A puzzle game where you indirectly control a stickman by drawing on the game world.
-            a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk") View on YouTube
+          li.project
+            h2: a(href="https://www.github.com/surjikal")
+              | Component-based Game Object System
+            p
+              | Implemented a component-based game object system in C++ &amp; QT
+              | that featured an embedded JavaScript editor which allowed you to
+              | create or modify game objects while your game is running.
 
-          li
-            h2 Music Production
-            p Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
-            a(href="https://soundcloud.com/surjikal") Listen on SoundCloud
+          li.project
+            h2: a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk")
+              | Sketchy
+            p
+              | A puzzle game where you indirectly control a stickman by drawing on the game world.
+
+          li.project
+            h2: a(href="https://soundcloud.com/surjikal")
+              | Music Production
+            p
+              | Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
+
 
 
       section.education
         h1 Education
         .degree
           | Bachelor of Computer Science
+          span.graduation
+            |  2013
         .location
           | Carleton University, Ottawa, Canada

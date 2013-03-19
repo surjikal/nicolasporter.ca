@@ -12,3 +12,14 @@
     // Making the box model not suck
     @include box-sizing(border-box !important);
 }
+
+// This prevents chrome from adding some weird spacing after parent ul...
+ul {
+    line-height: 0;
+    display: block;
+    vertical-align: top;
+}
+// ... but we need to restore the line height of the children :(
+.technologies li {
+    line-height: 1;
+}
