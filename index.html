@@ -34,10 +34,10 @@
           <div class="country">Canada</div>
         </div>
         <ul class="contact-methods list-unstyled">
-          <li><a href="mailto:porter.nicolas@gmail.com" data-content-narrow="email" class="contact-method contact-method-email email">yo@nicolasporter.ca</a></li>
-          <li><a target="_blank" href="https://github.com/surjikal" data-content-narrow="github" class="contact-method contact-method-github">github.com/surjikal</a></li>
-          <li><a target="_blank" href="https://twitter.com/surjikal" data-content-narrow="twitter" class="contact-method contact-method-twitter">twitter.com/surjikal</a></li>
-          <li><a href="tel:16134132048" data-content-narrow="telephone" class="contact-method contact-method-phone tel">+1 613 413 2048</a></li>
+          <li class="contact-method contact-method-github"><a target="_blank" href="https://github.com/surjikal" data-content-narrow="github">github.com/surjikal</a></li>
+          <li class="contact-method contact-method-email"><a href="mailto:porter.nicolas@gmail.com" data-content-narrow="email" class="email">yo@nicolasporter.ca</a></li>
+          <li class="contact-method contact-method-twitter"><a target="_blank" href="https://twitter.com/surjikal" data-content-narrow="twitter">twitter.com/surjikal</a></li>
+          <li class="contact-method contact-method-phone"><a href="tel:16134132048" data-content-narrow="telephone" class="tel">+1 613 413 2048</a></li>
         </ul>
       </article>
     </header>
@@ -70,19 +70,27 @@
       <section class="projects">
         <h1>Projects &amp; Hobbies</h1>
         <ul class="list-unstyled">
-          <li>
-            <h2>Sketchy</h2>
-            <p>A puzzle game where you indirectly control a stickman by drawing on the game world.</p><a href="https://www.youtube.com/watch?v=1JBkkSuvGRk">View on YouTube</a>
+          <li class="project">
+            <h2><a href="https://www.github.com/surjikal">Component-based Game Object System</a></h2>
+            <p>
+              Implemented a component-based game object system in C++ &amp; QT
+              that featured an embedded JavaScript editor which allowed you to
+              create or modify game objects while your game is running.
+            </p>
           </li>
-          <li>
-            <h2>Music Production</h2>
-            <p>Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).</p><a href="https://soundcloud.com/surjikal">Listen on SoundCloud</a>
+          <li class="project">
+            <h2><a href="https://www.youtube.com/watch?v=1JBkkSuvGRk">Sketchy</a></h2>
+            <p>A puzzle game where you indirectly control a stickman by drawing on the game world.</p>
+          </li>
+          <li class="project">
+            <h2><a href="https://soundcloud.com/surjikal">Music Production</a></h2>
+            <p>Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).</p>
           </li>
         </ul>
       </section>
       <section class="education">
         <h1>Education</h1>
-        <div class="degree">Bachelor of Computer Science</div>
+        <div class="degree">Bachelor of Computer Science<span class="graduation"> 2013</span></div>
         <div class="location">Carleton University, Ottawa, Canada</div>
       </section>
     </article>
