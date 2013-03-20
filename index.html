@@ -16,6 +16,8 @@
     <script src="assets/js/app/app.js"></script>
     <script src="assets/js/app/services/experiences-service.js"></script>
     <script src="assets/js/app/services/technologies-service.js"></script>
+    <script src="assets/js/app/services/github-service.js"></script>
+    <script src="assets/js/app/services/data-service.js"></script>
     <script src="assets/js/app/controllers/main-controller.js"></script>
     <script src="assets/js/app/controllers/experiences-controller.js"></script>
     <script src="assets/js/app/controllers/technologies-controller.js"></script>
@@ -41,58 +43,56 @@
         </ul>
       </article>
     </header>
-    <article class="content">
-      <section ng-controller="TechnologiesController" class="technologies">
-        <h1>Technologies</h1>
-        <ul ng-repeat="group in technologies">
-          <li ng-repeat="technology in group" ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}" class="technology">{{technology}}</li>
-        </ul>
-      </section>
-      <section ng-controller="ExperiencesController" class="experiences">
-        <article ng-repeat="experience in experiences" class="experience">
-          <header ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))" ng-mouseleave="setSelectedTechnologies([])">
-            <h1 class="location">{{experience.location}}</h1>
-            <h2 class="position">{{experience.position}}</h2>
-          </header>
-          <ul class="terms list-unstyled">
-            <li ng-repeat="term in experience.terms" ng-mouseenter="setSelectedTechnologies(term.technologies)" ng-mouseleave="setSelectedTechnologies([])" class="term">
-              <div class="duration">
-                <div class="start">{{term.duration.start}}</div>
-                <div class="stop">{{term.duration.stop}}</div>
-              </div>
-              <ul class="tasks">
-                <li ng-repeat="task in term.tasks" class="task">{{task.description || task}}</li>
-              </ul>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="projects">
-        <h1>Projects &amp; Hobbies</h1>
-        <ul class="list-unstyled">
-          <li class="project">
-            <h2><a href="https://www.github.com/surjikal">Component-based Game Object System</a></h2>
-            <p>
-              Implemented a component-based game object system in C++ &amp; QT
-              that featured an embedded JavaScript editor which allowed you to
-              create or modify game objects while your game is running.
-            </p>
-          </li>
-          <li class="project">
-            <h2><a href="https://www.youtube.com/watch?v=1JBkkSuvGRk">Sketchy</a></h2>
-            <p>A puzzle game where you indirectly control a stickman by drawing on the game world.</p>
-          </li>
-          <li class="project">
-            <h2><a href="https://soundcloud.com/surjikal">Music Production</a></h2>
-            <p>Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).</p>
+    <section ng-controller="TechnologiesController" class="technologies">
+      <h1>Technologies</h1>
+      <ul ng-repeat="group in technologies">
+        <li ng-repeat="technology in group" ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}" class="technology">{{technology}}</li>
+      </ul>
+    </section>
+    <section ng-controller="ExperiencesController" class="experiences">
+      <article ng-repeat="experience in experiences" class="experience">
+        <header ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))" ng-mouseleave="setSelectedTechnologies([])">
+          <h1 class="location">{{experience.location}}</h1>
+          <h2 class="position">{{experience.position}}</h2>
+        </header>
+        <ul class="terms list-unstyled">
+          <li ng-repeat="term in experience.terms" ng-mouseenter="setSelectedTechnologies(term.technologies)" ng-mouseleave="setSelectedTechnologies([])" class="term">
+            <div class="duration">
+              <div class="start">{{term.duration.start}}</div>
+              <div class="stop">{{term.duration.stop}}</div>
+            </div>
+            <ul class="tasks">
+              <li ng-repeat="task in term.tasks" class="task">{{task.description || task}}</li>
+            </ul>
           </li>
         </ul>
-      </section>
-      <section class="education">
-        <h1>Education</h1>
-        <div class="degree">Bachelor of Computer Science<span class="graduation"> 2013</span></div>
-        <div class="location">Carleton University, Ottawa, Canada</div>
-      </section>
-    </article>
+      </article>
+    </section>
+    <section class="projects">
+      <h1>Projects &amp; Hobbies</h1>
+      <ul class="list-unstyled">
+        <li class="project">
+          <h2><a href="https://www.github.com/surjikal">Component-based Game Object System</a></h2>
+          <p>
+            Implemented a component-based game object system in C++ &amp; QT
+            that featured an embedded JavaScript editor which allowed you to
+            create or modify game objects while your game is running.
+          </p>
+        </li>
+        <li class="project">
+          <h2><a href="https://www.youtube.com/watch?v=1JBkkSuvGRk">Sketchy</a></h2>
+          <p>A puzzle game where you indirectly control a stickman by drawing on the game world.</p>
+        </li>
+        <li class="project">
+          <h2><a href="https://soundcloud.com/surjikal">Music Production</a></h2>
+          <p>Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).</p>
+        </li>
+      </ul>
+    </section>
+    <section class="education">
+      <h1>Education</h1>
+      <div class="degree">Bachelor of Computer Science<span class="graduation"> 2013</span></div>
+      <div class="location">Carleton University, Ottawa, Canada</div>
+    </section>
   </body>
 </html>

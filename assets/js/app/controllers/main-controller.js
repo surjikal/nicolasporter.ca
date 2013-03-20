@@ -1,6 +1,6 @@
 (function() {
 
-  app.controller('MainController', function($scope) {
+  app.controller('MainController', function($scope, github) {
     $scope.selectedTechnologies = [];
     $scope.setSelectedTechnologies = function(technologies) {
       if (technologies == null) {
