@@ -1,10 +1,11 @@
 
-@import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/user-interface";
 
-// @import "fonts";
-@import "base";
+@import "lib/reset";
+@import "lib/mixins";
+@import "lib/functions";
+
 @import "layout";
 @import "theme";
 @import "modules";

@@ -1,3 +1,5 @@
 
-app.controller 'ExperiencesController', ($scope, experiences) ->
-  $scope.experiences = experiences
+app.controller 'ExperiencesController', ($scope, data) ->
+
+    (data.query 'experiences').success (experiences) ->
+        $scope.experiences = experiences

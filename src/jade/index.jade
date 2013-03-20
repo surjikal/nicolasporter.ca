@@ -26,12 +26,43 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
 
       mixin app-service("experiences")
       mixin app-service("technologies")
+      mixin app-service("github")
+      mixin app-service("data")
 
       mixin app-controller("main")
       mixin app-controller("experiences")
       mixin app-controller("technologies")
 
       mixin app-directive("task")
+
+
+    //- :coffeescript
+    //-   $ ->
+    //-     $technologies = $('.technologies')
+    //-     $fixed = $('<div class="fixed" />')
+    //-     $('header, .technologies').wrapAll $fixed
+    //-     fixedHeight = $fixed.height()
+
+    //-     $fixed.css
+    //-       top: '20px'
+    //-       height: "#{fixedHeight}px"
+    //-       position: 'absolute'
+    //-       left: '20px'
+    //-       right: '20px'
+
+
+    //-     $content = $('<div class="content">')
+    //-     $('body > section:not(.technologies)').wrapAll $content
+    //-     console.log fixedHeight
+
+    //-     $content.css
+    //-       position: 'absolute'
+    //-       top: "#{fixedHeight + 40}px"
+    //-       bottom: '20px'
+    //-       left: '20px'
+    //-       right: '20px'
+    //-       overflow: 'scroll'
+
 
 
   body(ng-controller="MainController")
@@ -85,68 +116,65 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
             | +1 613 413 2048
 
 
-    article.content
-
-      section.technologies(ng-controller="TechnologiesController")
-        h1 Technologies
-        ul(ng-repeat="group in technologies")
-          li.technology(ng-repeat="technology in group"
-            ,ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}")
-            | {{technology}}
+    section.technologies(ng-controller="TechnologiesController")
+      h1 Technologies
+      ul(ng-repeat="group in technologies")
+        li.technology(ng-repeat="technology in group"
+          ,ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}")
+          | {{technology}}
 
 
-      section.experiences(ng-controller="ExperiencesController")
+    section.experiences(ng-controller="ExperiencesController")
 
-        article.experience(ng-repeat="experience in experiences")
-          header(ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))"
-                ,ng-mouseleave="setSelectedTechnologies([])")
-            h1.location {{experience.location}}
-            h2.position {{experience.position}}
+      article.experience(ng-repeat="experience in experiences")
+        header(ng-mouseenter="setSelectedTechnologies(getTechnologies(experience))"
+              ,ng-mouseleave="setSelectedTechnologies([])")
+          h1.location {{experience.location}}
+          h2.position {{experience.position}}
 
-          ul.terms.list-unstyled
-            li.term(ng-repeat="term in experience.terms"
-                   ,ng-mouseenter="setSelectedTechnologies(term.technologies)"
-                   ,ng-mouseleave="setSelectedTechnologies([])")
-              .duration
-                .start {{term.duration.start}}
-                .stop {{term.duration.stop}}
-              ul.tasks
-                li.task(ng-repeat="task in term.tasks")
-                  | {{task.description || task}}
-
-
-      section.projects
-        h1 Projects &amp; Hobbies
-
-        ul.list-unstyled
-
-          li.project
-            h2: a(href="https://www.github.com/surjikal")
-              | Component-based Game Object System
-            p
-              | Implemented a component-based game object system in C++ &amp; QT
-              | that featured an embedded JavaScript editor which allowed you to
-              | create or modify game objects while your game is running.
-
-          li.project
-            h2: a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk")
-              | Sketchy
-            p
-              | A puzzle game where you indirectly control a stickman by drawing on the game world.
-
-          li.project
-            h2: a(href="https://soundcloud.com/surjikal")
-              | Music Production
-            p
-              | Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
+        ul.terms.list-unstyled
+          li.term(ng-repeat="term in experience.terms"
+                 ,ng-mouseenter="setSelectedTechnologies(term.technologies)"
+                 ,ng-mouseleave="setSelectedTechnologies([])")
+            .duration
+              .start {{term.duration.start}}
+              .stop {{term.duration.stop}}
+            ul.tasks
+              li.task(ng-repeat="task in term.tasks")
+                | {{task.description || task}}
 
 
+    section.projects
+      h1 Projects &amp; Hobbies
 
-      section.education
-        h1 Education
-        .degree
-          | Bachelor of Computer Science
-          span.graduation
-            |  2013
-        .location
-          | Carleton University, Ottawa, Canada
+      ul.list-unstyled
+
+        li.project
+          h2: a(href="https://www.github.com/surjikal")
+            | Component-based Game Object System
+          p
+            | Implemented a component-based game object system in C++ &amp; QT
+            | that featured an embedded JavaScript editor which allowed you to
+            | create or modify game objects while your game is running.
+
+        li.project
+          h2: a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk")
+            | Sketchy
+          p
+            | A puzzle game where you indirectly control a stickman by drawing on the game world.
+
+        li.project
+          h2: a(href="https://soundcloud.com/surjikal")
+            | Music Production
+          p
+            | Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
+
+
+    section.education
+      h1 Education
+      .degree
+        | Bachelor of Computer Science
+        span.graduation
+          |  2013
+      .location
+        | Carleton University, Ottawa, Canada

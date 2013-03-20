@@ -1,4 +1,6 @@
 
+@import "compass/reset";
+
 * {
     // Prevents the 'save image' dialog when a user holds a link or image
     -webkit-touch-callout: none;
@@ -13,13 +15,28 @@
     @include box-sizing(border-box !important);
 }
 
+a {
+    text-decoration: none;
+}
+
 // This prevents chrome from adding some weird spacing after parent ul...
+// You'll have to set line height in the children.
 ul {
     line-height: 0;
     display: block;
     vertical-align: top;
 }
-// ... but we need to restore the line height of the children :(
-.technologies li {
-    line-height: 1;
+
+li {
+    list-style: none;
+}
+
+
+@media print {
+    * {
+        color: black !important;
+        background: transparent !important;
+        text-shadow: none !important;
+        @include filter(none);
+    }
 }

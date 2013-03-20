@@ -1,10 +1,4 @@
 @media print {
-    * {
-        color: black !important;
-        background: transparent !important;
-        text-shadow: none !important;
-        @include filter(none);
-    }
 
     html, body {
         margin: 0.5cm auto;
@@ -15,15 +9,6 @@
         page-break-before: always;
         padding-top: 2cm;
     }
-
-    // body {
-    //     position: absolute;
-    //     left: 2.5cm;
-    //     right: 2.5cm;
-    //     bottom: 2.5cm;
-    //     top: 2.5cm;
-    //     width: auto;
-    // }
 
     @page {
         margin: 1in;

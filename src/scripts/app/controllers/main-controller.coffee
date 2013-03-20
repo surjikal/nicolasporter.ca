@@ -1,5 +1,5 @@
 
-app.controller 'MainController', ($scope) ->
+app.controller 'MainController', ($scope, github) ->
     $scope.selectedTechnologies = []
 
     $scope.setSelectedTechnologies = (technologies = []) ->
