@@ -154,22 +154,23 @@ body {
   font-size: 1.3rem;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background: #f9fafb;
+  background: #f0f2f5;
   color: #737d8c;
 }
 
 /* line 37, ../../../src/styles/_theme.scss */
 a, a:after {
-  border-bottom: 1px dotted #ccd7dd;
+  border-bottom: 1px dotted #c5d0d8;
   color: #194c66;
+  font-weight: 300;
 }
-/* line 41, ../../../src/styles/_theme.scss */
+/* line 42, ../../../src/styles/_theme.scss */
 a:hover, a:after:hover {
-  border-bottom: 1px dotted #a7cde0;
+  border-bottom: 1px dotted #a2c8dc;
   color: #2e8ab8;
 }
 
-/* line 47, ../../../src/styles/_theme.scss */
+/* line 48, ../../../src/styles/_theme.scss */
 ul > li {
   padding-left: 10px;
   text-indent: -13px;
@@ -178,14 +179,14 @@ ul > li {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-/* line 53, ../../../src/styles/_theme.scss */
+/* line 54, ../../../src/styles/_theme.scss */
 ul > li:before {
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
   content: '❯';
-  color: #b6bbc3;
+  color: #b1b7c0;
   font-size: 9px;
   font-size: 0.9rem;
   padding-right: 6px;
@@ -194,98 +195,98 @@ ul > li:before {
   top: -1px;
 }
 
-/* line 65, ../../../src/styles/_theme.scss */
+/* line 66, ../../../src/styles/_theme.scss */
 ul.list-unstyled > li {
   padding-left: 0;
   text-indent: 0;
 }
-/* line 69, ../../../src/styles/_theme.scss */
+/* line 70, ../../../src/styles/_theme.scss */
 ul.list-unstyled > li:before {
   content: '';
   position: static;
 }
 
-/* line 75, ../../../src/styles/_theme.scss */
+/* line 76, ../../../src/styles/_theme.scss */
 h1 {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-/* line 80, ../../../src/styles/_theme.scss */
+/* line 81, ../../../src/styles/_theme.scss */
 h2 {
   font-size: 15px;
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-/* line 85, ../../../src/styles/_theme.scss */
+/* line 86, ../../../src/styles/_theme.scss */
 .name {
   font-size: 32px;
   font-size: 3.2rem;
 }
 
-/* line 89, ../../../src/styles/_theme.scss */
+/* line 90, ../../../src/styles/_theme.scss */
 .contact-method a {
   font-size: 12px;
   font-size: 1.2rem;
 }
 
-/* line 94, ../../../src/styles/_theme.scss */
+/* line 95, ../../../src/styles/_theme.scss */
 .technologies, .experience {
   cursor: text;
 }
 
-/* line 101, ../../../src/styles/_theme.scss */
+/* line 102, ../../../src/styles/_theme.scss */
 .experience header,
 .technologies h1,
 .projects h1,
 .education h1 {
   line-height: 1.3;
-  border-bottom: 1px inset #e4e7ea;
+  border-bottom: 1px inset #dde0e5;
 }
 
-/* line 108, ../../../src/styles/_theme.scss */
+/* line 109, ../../../src/styles/_theme.scss */
 .experience header, .experience .duration, .experience h1, .experience h2, .experience .task:before {
   -webkit-transition: color 0.5s, border-bottom-color 0.5s;
   -moz-transition: color 0.5s, border-bottom-color 0.5s;
   -o-transition: color 0.5s, border-bottom-color 0.5s;
   transition: color 0.5s, border-bottom-color 0.5s;
 }
-/* line 112, ../../../src/styles/_theme.scss */
+/* line 113, ../../../src/styles/_theme.scss */
 .experience .duration {
-  color: #b6bbc3;
+  color: #b1b7c0;
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: 300;
   font-style: italic;
 }
-/* line 119, ../../../src/styles/_theme.scss */
+/* line 120, ../../../src/styles/_theme.scss */
 .experience .term {
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 124, ../../../src/styles/_theme.scss */
+/* line 125, ../../../src/styles/_theme.scss */
 .experience:hover h1, .experience:hover h2, .experience:hover .term:hover .task:before {
   color: #2e8ab8;
 }
-/* line 127, ../../../src/styles/_theme.scss */
+/* line 128, ../../../src/styles/_theme.scss */
 .experience:hover header {
-  border-bottom-color: #bcd8e6;
+  border-bottom-color: #b5d2e2;
 }
 
-/* line 135, ../../../src/styles/_theme.scss */
+/* line 136, ../../../src/styles/_theme.scss */
 .experience:hover .term:only-child .duration,
 .experience:hover .term:only-child .task:before,
 .term:hover .duration {
-  color: #4295be;
+  color: #4194be;
 }
 
-/* line 141, ../../../src/styles/_theme.scss */
+/* line 142, ../../../src/styles/_theme.scss */
 .technologies.selected .technology {
-  color: #b6bbc3;
+  color: #b1b7c0;
 }
-/* line 145, ../../../src/styles/_theme.scss */
+/* line 146, ../../../src/styles/_theme.scss */
 .technologies .technology {
   line-height: 1;
   -webkit-transition: color 0.5s;
@@ -293,31 +294,31 @@ h2 {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-/* line 149, ../../../src/styles/_theme.scss */
+/* line 150, ../../../src/styles/_theme.scss */
 .technologies .technology.selected, .technologies .technology.selected:before {
   color: #2e8ab8;
 }
 
-/* line 158, ../../../src/styles/_theme.scss */
+/* line 159, ../../../src/styles/_theme.scss */
 .education .degree {
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 162, ../../../src/styles/_theme.scss */
+/* line 163, ../../../src/styles/_theme.scss */
 .education .graduation {
   font-weight: 300;
-  color: #b6bbc3;
+  color: #b1b7c0;
   float: left;
   margin-right: 15px;
 }
-/* line 169, ../../../src/styles/_theme.scss */
+/* line 170, ../../../src/styles/_theme.scss */
 .education .location {
   font-size: 12px;
   font-size: 1.2rem;
   font-style: italic;
 }
 
-/* line 177, ../../../src/styles/_theme.scss */
+/* line 178, ../../../src/styles/_theme.scss */
 .projects h2 {
   font-size: 13px;
   font-size: 1.3rem;
