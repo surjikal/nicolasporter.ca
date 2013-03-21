@@ -116,7 +116,8 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
             | +1 613 413 2048
 
 
-    section.technologies(ng-controller="TechnologiesController")
+    section.technologies(ng-controller="TechnologiesController"
+                        ,ng-class="{selected: selectedTechnologies.length}")
       h1 Technologies
       ul(ng-repeat="group in technologies")
         li.technology(ng-repeat="technology in group"
