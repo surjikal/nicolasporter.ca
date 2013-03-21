@@ -43,7 +43,7 @@
         </ul>
       </article>
     </header>
-    <section ng-controller="TechnologiesController" class="technologies">
+    <section ng-controller="TechnologiesController" ng-class="{selected: selectedTechnologies.length}" class="technologies">
       <h1>Technologies</h1>
       <ul ng-repeat="group in technologies">
         <li ng-repeat="technology in group" ng-class="{selected: selectedTechnologies.indexOf(technology) !== -1}" class="technology">{{technology}}</li>

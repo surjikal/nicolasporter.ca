@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 /* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -125,59 +125,67 @@ body > header {
 }
 /* line 21, ../../../src/styles/_layout.scss */
 body section {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
-/* line 27, ../../../src/styles/_layout.scss */
+/* line 26, ../../../src/styles/_layout.scss */
 .projects > h1, .technologies > h1 {
   margin-bottom: 10px;
 }
 
-/* line 31, ../../../src/styles/_layout.scss */
+/* line 30, ../../../src/styles/_layout.scss */
 .experiences .term:first-child {
   padding-top: 10px;
 }
 
-/* line 35, ../../../src/styles/_layout.scss */
+/* line 34, ../../../src/styles/_layout.scss */
 .content .experiences {
   margin-top: 0;
 }
 
-/* line 31, ../../../src/styles/_theme.scss */
+/* line 23, ../../../src/styles/_theme.scss */
 html {
   font-size: 10px;
 }
 
-/* line 35, ../../../src/styles/_theme.scss */
+/* line 27, ../../../src/styles/_theme.scss */
 body {
   font-size: 13px;
   font-size: 1.3rem;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background: #f3f5f8;
+  background: #f9fafb;
   color: #737d8c;
 }
 
-/* line 44, ../../../src/styles/_theme.scss */
+/* line 37, ../../../src/styles/_theme.scss */
 a, a:after {
-  border-bottom: 1px dotted #c7d3da;
+  border-bottom: 1px dotted #ccd7dd;
   color: #194c66;
 }
-/* line 48, ../../../src/styles/_theme.scss */
+/* line 41, ../../../src/styles/_theme.scss */
 a:hover, a:after:hover {
-  border-bottom: 1px dotted #a4cade;
+  border-bottom: 1px dotted #a7cde0;
   color: #2e8ab8;
 }
 
-/* line 54, ../../../src/styles/_theme.scss */
+/* line 47, ../../../src/styles/_theme.scss */
 ul > li {
   padding-left: 10px;
   text-indent: -13px;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
 }
-/* line 59, ../../../src/styles/_theme.scss */
+/* line 53, ../../../src/styles/_theme.scss */
 ul > li:before {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
   content: '❯';
-  color: #b3b9c2;
+  color: #b6bbc3;
   font-size: 9px;
   font-size: 0.9rem;
   padding-right: 6px;
@@ -186,89 +194,98 @@ ul > li:before {
   top: -1px;
 }
 
-/* line 70, ../../../src/styles/_theme.scss */
+/* line 65, ../../../src/styles/_theme.scss */
 ul.list-unstyled > li {
   padding-left: 0;
   text-indent: 0;
 }
-/* line 74, ../../../src/styles/_theme.scss */
+/* line 69, ../../../src/styles/_theme.scss */
 ul.list-unstyled > li:before {
   content: '';
   position: static;
 }
 
-/* line 80, ../../../src/styles/_theme.scss */
+/* line 75, ../../../src/styles/_theme.scss */
 h1 {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-/* line 85, ../../../src/styles/_theme.scss */
+/* line 80, ../../../src/styles/_theme.scss */
 h2 {
   font-size: 15px;
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-/* line 90, ../../../src/styles/_theme.scss */
+/* line 85, ../../../src/styles/_theme.scss */
 .name {
   font-size: 32px;
   font-size: 3.2rem;
 }
 
-/* line 94, ../../../src/styles/_theme.scss */
+/* line 89, ../../../src/styles/_theme.scss */
 .contact-method a {
   font-size: 12px;
   font-size: 1.2rem;
 }
 
-/* line 99, ../../../src/styles/_theme.scss */
+/* line 94, ../../../src/styles/_theme.scss */
 .technologies, .experience {
   cursor: text;
 }
 
-/* line 103, ../../../src/styles/_theme.scss */
-.experience header, .technologies h1, .projects h1, .education h1 {
+/* line 101, ../../../src/styles/_theme.scss */
+.experience header,
+.technologies h1,
+.projects h1,
+.education h1 {
   line-height: 1.3;
-  border-bottom: 1px inset #dfe3e7;
+  border-bottom: 1px inset #e4e7ea;
 }
 
-/* line 110, ../../../src/styles/_theme.scss */
-.experience header, .experience .duration, .experience h1, .experience h2 {
+/* line 108, ../../../src/styles/_theme.scss */
+.experience header, .experience .duration, .experience h1, .experience h2, .experience .task:before {
   -webkit-transition: color 0.5s, border-bottom-color 0.5s;
   -moz-transition: color 0.5s, border-bottom-color 0.5s;
   -o-transition: color 0.5s, border-bottom-color 0.5s;
   transition: color 0.5s, border-bottom-color 0.5s;
 }
-/* line 114, ../../../src/styles/_theme.scss */
+/* line 112, ../../../src/styles/_theme.scss */
 .experience .duration {
-  color: #b3b9c2;
+  color: #b6bbc3;
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: 300;
+  font-style: italic;
 }
-/* line 120, ../../../src/styles/_theme.scss */
+/* line 119, ../../../src/styles/_theme.scss */
 .experience .term {
   font-size: 13px;
   font-size: 1.3rem;
 }
-/* line 125, ../../../src/styles/_theme.scss */
-.experience:hover h1, .experience:hover h2 {
+/* line 124, ../../../src/styles/_theme.scss */
+.experience:hover h1, .experience:hover h2, .experience:hover .term:hover .task:before {
   color: #2e8ab8;
 }
-/* line 128, ../../../src/styles/_theme.scss */
+/* line 127, ../../../src/styles/_theme.scss */
 .experience:hover header {
-  border-bottom-color: #b7d4e4;
+  border-bottom-color: #bcd8e6;
 }
 
 /* line 135, ../../../src/styles/_theme.scss */
 .experience:hover .term:only-child .duration,
+.experience:hover .term:only-child .task:before,
 .term:hover .duration {
-  color: #4194be;
+  color: #4295be;
 }
 
 /* line 141, ../../../src/styles/_theme.scss */
+.technologies.selected .technology {
+  color: #b6bbc3;
+}
+/* line 145, ../../../src/styles/_theme.scss */
 .technologies .technology {
   line-height: 1;
   -webkit-transition: color 0.5s;
@@ -276,31 +293,31 @@ h2 {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-/* line 145, ../../../src/styles/_theme.scss */
-.technologies .technology.selected {
+/* line 149, ../../../src/styles/_theme.scss */
+.technologies .technology.selected, .technologies .technology.selected:before {
   color: #2e8ab8;
 }
 
-/* line 153, ../../../src/styles/_theme.scss */
+/* line 158, ../../../src/styles/_theme.scss */
 .education .degree {
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 157, ../../../src/styles/_theme.scss */
+/* line 162, ../../../src/styles/_theme.scss */
 .education .graduation {
   font-weight: 300;
-  color: #b3b9c2;
+  color: #b6bbc3;
   float: left;
   margin-right: 15px;
 }
-/* line 164, ../../../src/styles/_theme.scss */
+/* line 169, ../../../src/styles/_theme.scss */
 .education .location {
   font-size: 12px;
   font-size: 1.2rem;
   font-style: italic;
 }
 
-/* line 172, ../../../src/styles/_theme.scss */
+/* line 177, ../../../src/styles/_theme.scss */
 .projects h2 {
   font-size: 13px;
   font-size: 1.3rem;
@@ -393,60 +410,46 @@ h2 {
   margin-bottom: 8px;
 }
 
-/* line 4, ../../../src/styles/modules/_experiences.scss */
-.experiences .experience {
-  padding-bottom: 15px;
-}
-/* line 10, ../../../src/styles/modules/_experiences.scss */
-.experiences .experience:last-child {
-  padding-bottom: 0;
-}
-/* line 14, ../../../src/styles/modules/_experiences.scss */
+/* line 6, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience:first-child header {
   padding: 0;
 }
-/* line 18, ../../../src/styles/modules/_experiences.scss */
+/* line 10, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience header {
-  padding: 15px 0 0 0;
+  padding: 30px 0 0 0;
   position: relative;
 }
-/* line 26, ../../../src/styles/modules/_experiences.scss */
+/* line 18, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience header .location, .experiences .experience header .position {
   display: inline;
 }
-/* line 30, ../../../src/styles/modules/_experiences.scss */
+/* line 22, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience header .location {
   margin-right: 10px;
 }
-/* line 34, ../../../src/styles/modules/_experiences.scss */
+/* line 26, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience header .duration {
-  line-height: 25px;
+  line-height: 1;
 }
-@media only screen and (max-width: 450px) {
-  /* line 34, ../../../src/styles/modules/_experiences.scss */
-  .experiences .experience header .duration {
-    line-height: 20px;
-  }
-}
-/* line 44, ../../../src/styles/modules/_experiences.scss */
+/* line 32, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience .duration .start, .experiences .experience .duration .stop {
   display: inline;
 }
-/* line 48, ../../../src/styles/modules/_experiences.scss */
+/* line 36, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience .duration .start:after {
   content: ' –';
   margin: 0 5px;
 }
-/* line 54, ../../../src/styles/modules/_experiences.scss */
+/* line 42, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience .term + .term {
   padding-top: 15px;
 }
-/* line 59, ../../../src/styles/modules/_experiences.scss */
+/* line 47, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience .term .duration {
   line-height: 1;
   height: 100%;
 }
-/* line 65, ../../../src/styles/modules/_experiences.scss */
+/* line 53, ../../../src/styles/modules/_experiences.scss */
 .experiences .experience .task {
   line-height: 15px;
   margin-top: 7px;
