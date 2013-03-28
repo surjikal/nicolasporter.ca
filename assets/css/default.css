@@ -102,6 +102,12 @@ li {
     filter: none;
   }
 }
+@media not screen {
+  /* line 3, ../../../src/styles/lib/_utils.scss */
+  .screen-only {
+    display: none;
+  }
+}
 /* line 2, ../../../src/styles/_layout.scss */
 html, body {
   min-height: 100%;
@@ -244,46 +250,11 @@ h2 {
   line-height: 1.3;
 }
 
-/* line 108, ../../../src/styles/_theme.scss */
-.experience header, .experience .duration, .experience h1, .experience h2, .experience .task:before {
-  -webkit-transition: color 0.5s, border-bottom-color 0.5s;
-  -moz-transition: color 0.5s, border-bottom-color 0.5s;
-  -o-transition: color 0.5s, border-bottom-color 0.5s;
-  transition: color 0.5s, border-bottom-color 0.5s;
-}
-/* line 112, ../../../src/styles/_theme.scss */
-.experience .duration {
-  color: #7ea1b4;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-style: italic;
-}
-/* line 118, ../../../src/styles/_theme.scss */
-.experience .term {
-  font-size: 13px;
-  font-size: 1.3rem;
-}
-/* line 123, ../../../src/styles/_theme.scss */
-.experience:hover h1, .experience:hover h2, .experience:hover .term:hover .task:before {
-  color: #1791cf;
-}
-/* line 126, ../../../src/styles/_theme.scss */
-.experience:hover header {
-  border-bottom-color: #aed4e9;
-}
-
-/* line 134, ../../../src/styles/_theme.scss */
-.experience:hover .term:only-child .duration,
-.experience:hover .term:only-child .task:before,
-.term:hover .duration {
-  color: #2c9ad2;
-}
-
-/* line 140, ../../../src/styles/_theme.scss */
+/* line 109, ../../../src/styles/_theme.scss */
 .technologies.selected .technology {
   color: #7ea1b4;
 }
-/* line 144, ../../../src/styles/_theme.scss */
+/* line 113, ../../../src/styles/_theme.scss */
 .technologies .technology {
   line-height: 1;
   -webkit-transition: color 0.5s;
@@ -291,34 +262,90 @@ h2 {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-/* line 148, ../../../src/styles/_theme.scss */
+/* line 117, ../../../src/styles/_theme.scss */
 .technologies .technology.selected, .technologies .technology.selected:before {
   color: #1791cf;
 }
 
-/* line 157, ../../../src/styles/_theme.scss */
+/* line 126, ../../../src/styles/_theme.scss */
+.experience header, .experience .duration, .experience h1, .experience h2, .experience .task:before {
+  -webkit-transition: color 0.5s, border-bottom-color 0.5s;
+  -moz-transition: color 0.5s, border-bottom-color 0.5s;
+  -o-transition: color 0.5s, border-bottom-color 0.5s;
+  transition: color 0.5s, border-bottom-color 0.5s;
+}
+/* line 130, ../../../src/styles/_theme.scss */
+.experience .duration {
+  color: #7ea1b4;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+/* line 136, ../../../src/styles/_theme.scss */
+.experience .term {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+/* line 141, ../../../src/styles/_theme.scss */
+.experience:hover h1, .experience:hover h2, .experience:hover .term:hover .task:before {
+  color: #1791cf;
+}
+/* line 144, ../../../src/styles/_theme.scss */
+.experience:hover header {
+  border-bottom-color: #aed4e9;
+}
+
+/* line 153, ../../../src/styles/_theme.scss */
+.experience:hover .term:only-child .duration,
+.experience:hover .term:only-child .task:before,
+.term:hover .duration {
+  color: #2c9ad2;
+}
+
+/* line 160, ../../../src/styles/_theme.scss */
 .education .degree {
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 161, ../../../src/styles/_theme.scss */
+/* line 164, ../../../src/styles/_theme.scss */
 .education .graduation {
   color: #7ea1b4;
   float: left;
   margin-right: 15px;
 }
-/* line 167, ../../../src/styles/_theme.scss */
+/* line 170, ../../../src/styles/_theme.scss */
 .education .location {
   font-size: 12px;
   font-size: 1.2rem;
+  color: #7ea1b4;
   font-style: italic;
+  line-height: 1.4;
+}
+/* line 177, ../../../src/styles/_theme.scss */
+.education h2 {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+/* line 181, ../../../src/styles/_theme.scss */
+.education .awards li {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
-/* line 175, ../../../src/styles/_theme.scss */
+/* line 190, ../../../src/styles/_theme.scss */
 .projects h2 {
   font-size: 13px;
   font-size: 1.3rem;
   line-height: 1.3;
+}
+/* line 195, ../../../src/styles/_theme.scss */
+.projects .project li {
+  line-height: 1.6;
+}
+/* line 199, ../../../src/styles/_theme.scss */
+.projects p {
+  line-height: 1.5;
 }
 
 /* line 2, ../../../src/styles/modules/_contact_info.scss */
@@ -460,10 +487,13 @@ h2 {
 .projects .project {
   margin-top: 15px;
 }
-/* line 12, ../../../src/styles/modules/_projects.scss */
+/* line 11, ../../../src/styles/modules/_projects.scss */
+.projects .project ul {
+  margin-top: 5px;
+}
+/* line 16, ../../../src/styles/modules/_projects.scss */
 .projects p {
   margin-top: 5px;
-  line-height: 15px;
 }
 
 /* line 4, ../../../src/styles/modules/_education.scss */
@@ -471,18 +501,22 @@ h2 {
   margin-bottom: 10px;
 }
 /* line 8, ../../../src/styles/modules/_education.scss */
-.education .location {
-  line-height: 1.5;
+.education h2 {
+  margin-top: 5px;
+}
+/* line 11, ../../../src/styles/modules/_education.scss */
+.education .awards {
+  margin-top: 4px;
 }
 
 @media print {
-  /* line 3, ../../../src/styles/_print.scss */
+  /* line 4, ../../../src/styles/_print.scss */
   html, body {
     margin: 0.5cm auto;
     width: 6.5in;
   }
 
-  /* line 8, ../../../src/styles/_print.scss */
+  /* line 9, ../../../src/styles/_print.scss */
   .projects {
     page-break-before: always;
     padding-top: 2cm;
@@ -492,34 +526,34 @@ h2 {
     margin: 1in;
 }
 
-  /* line 17, ../../../src/styles/_print.scss */
+  /* line 18, ../../../src/styles/_print.scss */
   .duration {
     color: #444;
   }
 
-  /* line 21, ../../../src/styles/_print.scss */
+  /* line 22, ../../../src/styles/_print.scss */
   li:before {
     color: #444;
   }
 
-  /* line 25, ../../../src/styles/_print.scss */
+  /* line 26, ../../../src/styles/_print.scss */
   header, h1 {
     border: none !important;
   }
 
-  /* line 29, ../../../src/styles/_print.scss */
+  /* line 30, ../../../src/styles/_print.scss */
   a {
     color: black;
     border: none;
   }
 
-  /* line 34, ../../../src/styles/_print.scss */
+  /* line 35, ../../../src/styles/_print.scss */
   .duration {
     font-size: 10px;
     font-style: italic;
   }
 
-  /* line 41, ../../../src/styles/_print.scss */
+  /* line 42, ../../../src/styles/_print.scss */
   .projects h2 {
     font-size: 14px;
   }
