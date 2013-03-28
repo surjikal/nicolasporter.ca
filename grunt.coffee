@@ -73,6 +73,9 @@ module.exports = (grunt) ->
                 files: '<%= config.build_directory %>/assets/js/libs/': 'src/scripts/libs/**'
             #images:
             #    files: '<%= config.build_directory %>/assets/images/': 'src/images/**'
+            raw_files:
+                files: '<%= config.build_directory %>/assets/files/': 'src/files/**'
+
 
 
         # CSS Compass compilation

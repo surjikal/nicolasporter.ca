@@ -2,6 +2,8 @@
 include mixins/asset-mixins
 include mixins/asset-mixins-angular
 
+include mixins/utils
+
 
 !!!
 html(lang='en', ng-app='ca.nicolasporter.resume')
@@ -34,35 +36,6 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
       mixin app-controller("technologies")
 
       mixin app-directive("task")
-
-
-    //- :coffeescript
-    //-   $ ->
-    //-     $technologies = $('.technologies')
-    //-     $fixed = $('<div class="fixed" />')
-    //-     $('header, .technologies').wrapAll $fixed
-    //-     fixedHeight = $fixed.height()
-
-    //-     $fixed.css
-    //-       top: '20px'
-    //-       height: "#{fixedHeight}px"
-    //-       position: 'absolute'
-    //-       left: '20px'
-    //-       right: '20px'
-
-
-    //-     $content = $('<div class="content">')
-    //-     $('body > section:not(.technologies)').wrapAll $content
-    //-     console.log fixedHeight
-
-    //-     $content.css
-    //-       position: 'absolute'
-    //-       top: "#{fixedHeight + 40}px"
-    //-       bottom: '20px'
-    //-       left: '20px'
-    //-       right: '20px'
-    //-       overflow: 'scroll'
-
 
 
   body(ng-controller="MainController")
@@ -152,31 +125,54 @@ html(lang='en', ng-app='ca.nicolasporter.resume')
       ul.list-unstyled
 
         li.project
-          h2: a(href="https://www.github.com/surjikal")
-            | Component-based Game Object System
-          p
-            | Implemented a component-based game object system in C++ &amp; QT
-            | that featured an embedded JavaScript editor which allowed you to
-            | create or modify game objects while your game is running.
-
-        li.project
           h2: a(href="https://www.youtube.com/watch?v=1JBkkSuvGRk")
             | Sketchy
           p
             | A puzzle game where you indirectly control a stickman by drawing on the game world.
 
         li.project
-          h2: a(href="https://soundcloud.com/surjikal")
-            | Music Production
+          h2: a(href="https://www.github.com/surjikal/cbgos-experiment")
+            | Component-based Game Object System Experiment
           p
-            | Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase).
+            | Made a game object system in C++ &amp; QT that features an embedded JavaScript editor
+            | to modify game object types at runtime.
 
+        li.project
+          h2: a(href="https://soundcloud.com/surjikal")
+            | Music
+          ul
+            li Electric guitar player (~10 years), electronic music composition (Reason, Live, Cubase)
+            li Played a couple of live rock shows (solo and with a band)
+            li Participated in High School concert (trumpet), jazz and rock bands
+
+        li.project
+          h2: a(href="/assets/files/degree-planner.pdf")
+            | User Experience Design - Degree Planner
+          p
+            | Identified personas, conducted stakeholder interviews and created prototypes based on feedback
+            | degree planning tool. This was a team project for an HCI class.
+            span.screen-only  The linked file shows the final mockup after going through three iterations.
+
+        li.project
+          h2: a(href="/assets/files/testing-memorability-gestures.pdf")
+            | User Experience Design - Testing the memorability of gesture sets
+          p
+            | Created a framework that allows you to determine if, for example, a
+            | cross is an intuitive gesture to use for a "delete" action.
+            | This was also a team project for an HCI class, but the implementation was done by me (using Django).
 
     section.education
       h1 Education
-      .degree
-        | Bachelor of Computer Science
-        span.graduation
-          |  2013
-      .location
-        | Carleton University, Ottawa, Canada
+
+      article.degree
+        .degree-name
+          | Bachelor of Computer Science
+        .graduation
+          | 2013
+        .location
+          | Carleton University, Ottawa, Canada
+
+        ul.awards
+          li Carleton University Entrance Scholarship
+          li Chalmers Jack MacKenzie Scholarship
+          li Deans' Honour List
