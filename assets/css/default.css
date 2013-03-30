@@ -160,19 +160,19 @@ body {
   font-size: 1.3rem;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background: #f0f2f5;
-  color: #0d5173;
+  background: #f9fafb;
+  color: #565a5c;
 }
 
 /* line 37, ../../../src/styles/_theme.scss */
 a, a:after {
-  border-bottom: 1px dotted #c2d1db;
-  color: #0d5173;
+  border-bottom: 1px dotted #c7d4dd;
+  color: #003c66;
 }
 /* line 41, ../../../src/styles/_theme.scss */
 a:hover, a:after:hover {
-  border-bottom: 1px dotted #99cbe5;
-  color: #1791cf;
+  border-bottom: 1px dotted #95c5e8;
+  color: #0077cc;
 }
 
 /* line 47, ../../../src/styles/_theme.scss */
@@ -191,7 +191,7 @@ ul > li:before {
   -o-transition: color 0.5s;
   transition: color 0.5s;
   content: '❯';
-  color: #7ea1b4;
+  color: #a7aaab;
   font-size: 9px;
   font-size: 0.9rem;
   padding-right: 6px;
@@ -252,7 +252,7 @@ h2 {
 
 /* line 109, ../../../src/styles/_theme.scss */
 .technologies.selected .technology {
-  color: #7ea1b4;
+  color: #a7aaab;
 }
 /* line 113, ../../../src/styles/_theme.scss */
 .technologies .technology {
@@ -264,7 +264,7 @@ h2 {
 }
 /* line 117, ../../../src/styles/_theme.scss */
 .technologies .technology.selected, .technologies .technology.selected:before {
-  color: #1791cf;
+  color: #0077cc;
 }
 
 /* line 126, ../../../src/styles/_theme.scss */
@@ -276,9 +276,9 @@ h2 {
 }
 /* line 130, ../../../src/styles/_theme.scss */
 .experience .duration {
-  color: #7ea1b4;
   font-size: 12px;
   font-size: 1.2rem;
+  color: #a7aaab;
   font-style: italic;
 }
 /* line 136, ../../../src/styles/_theme.scss */
@@ -288,18 +288,18 @@ h2 {
 }
 /* line 141, ../../../src/styles/_theme.scss */
 .experience:hover h1, .experience:hover h2, .experience:hover .term:hover .task:before {
-  color: #1791cf;
+  color: #0077cc;
 }
 /* line 144, ../../../src/styles/_theme.scss */
 .experience:hover header {
-  border-bottom-color: #aed4e9;
+  border-bottom-color: #aed2ec;
 }
 
 /* line 153, ../../../src/styles/_theme.scss */
 .experience:hover .term:only-child .duration,
 .experience:hover .term:only-child .task:before,
 .term:hover .duration {
-  color: #2c9ad2;
+  color: #1884d0;
 }
 
 /* line 160, ../../../src/styles/_theme.scss */
@@ -309,7 +309,7 @@ h2 {
 }
 /* line 164, ../../../src/styles/_theme.scss */
 .education .graduation {
-  color: #7ea1b4;
+  color: #a7aaab;
   float: left;
   margin-right: 15px;
 }
@@ -317,7 +317,7 @@ h2 {
 .education .location {
   font-size: 12px;
   font-size: 1.2rem;
-  color: #7ea1b4;
+  color: #a7aaab;
   font-style: italic;
   line-height: 1.4;
 }
