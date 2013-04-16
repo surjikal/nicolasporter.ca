@@ -1,4 +1,3 @@
-
 app.service 'experiences', -> [
 
   location: '42'
@@ -8,7 +7,7 @@ app.service 'experiences', -> [
       start: 'February 2013'
       stop:  'Current'
     tasks: [
-      "Crafted a framework for rapid prototyping of mobile web apps with a native-like user experience"
+      "Crafted a framework for creating native-like mobile web apps quickly"
       "Built an analytics dashboard featuring a cache-manifest-based offline mode"
       "Designed a distributed architecture where many specialized processes act as independent web services"
       "Finalist at the first Fashion Hackathon in NYC, presented the product on the runway during NYC Fashion Week"
@@ -49,7 +48,7 @@ app.service 'experiences', -> [
       stop:  'September 2012'
     tasks: [
       "Node.js development on a multi-tenant web app (BlazeLoop)"
-      "Designed and implemented a dynamic API system, significantly improving BlazeLoop's maintainability"
+      "Designed and implemented a (now patented!) dynamic API system, significantly improving BlazeLoop's maintainability"
       "Conducted multiple in-person technical interviews"
     ]
     technologies:[
