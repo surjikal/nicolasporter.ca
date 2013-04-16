@@ -11,7 +11,7 @@
               start: 'February 2013',
               stop: 'Current'
             },
-            tasks: ["Crafted a framework for rapid prototyping of mobile web apps with a native-like user experience", "Built an analytics dashboard featuring a cache-manifest-based offline mode", "Designed a distributed architecture where many specialized processes act as independent web services", "Finalist at the first Fashion Hackathon in NYC, presented the product on the runway during NYC Fashion Week"],
+            tasks: ["Crafted a framework for creating native-like mobile web apps very quickly", "Built an analytics dashboard featuring a cache-manifest-based offline mode", "Designed a distributed architecture where many specialized processes act as independent web services", "Finalist at the first Fashion Hackathon in NYC, presented the product on the runway during NYC Fashion Week"],
             technologies: ["JavaScript", "AngularJS", "Node.js, Express", "Git", "jQuery, Zepto", "Fabric", "HTML, Jade", "CSS, Sass, Compass", "Nginx", "GNU/Linux", "Bash, Zsh"]
           }
         ]
@@ -37,7 +37,7 @@
               start: 'April 2012',
               stop: 'September 2012'
             },
-            tasks: ["Node.js development on a multi-tenant web app (BlazeLoop)", "Designed and implemented a dynamic API system, significantly improving BlazeLoop's maintainability", "Conducted multiple in-person technical interviews"],
+            tasks: ["Node.js development on a multi-tenant web app (BlazeLoop)", "Designed and implemented a (now patented!) dynamic API system, significantly improving BlazeLoop's maintainability", "Conducted multiple in-person technical interviews"],
             technologies: ["JavaScript", "Git", "jQuery, Zepto", "HTML, Jade", "CSS, Sass, Compass", "Nginx", "GNU/Linux", "Bash, Zsh", "Node.js, Express", "MongoDB"]
           }, {
             duration: {
