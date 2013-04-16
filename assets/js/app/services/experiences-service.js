@@ -44,7 +44,7 @@
               start: 'April 2011',
               stop: 'September 2011'
             },
-            tasks: ["Designed and built prototype for a new mobile web app, BlazeLoop"],
+            tasks: ["Designed and built prototype for a new mobile web app, BlazeLoop", "Improved BlazeCast's compatibility with legacy IE browsers."],
             technologies: ["JavaScript", "jQuery, Zepto", "Git", "HTML, Jade", "CSS, Sass, Compass", "GNU/Linux", "Bash, Zsh"]
           }, {
             duration: {
