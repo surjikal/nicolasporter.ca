@@ -4,7 +4,7 @@
     return [
       {
         location: '42',
-        position: 'CTO - Chief Technology Overlord',
+        position: 'Founder & CTO',
         terms: [
           {
             duration: {
@@ -22,7 +22,7 @@
           {
             duration: {
               start: 'April 2012',
-              stop: 'Current'
+              stop: 'February 2013'
             },
             tasks: ["Built a hybrid mobile web app for an m-commerce venture; integrated with Stripe and PayPal APIs", "Developed a highly customized GruntJS-based toolchain, reducing setup times from a day to seconds", "Created the app using a decoupled client/server architecture (Backbone & Django+TastyPie)", "Finalists at the Ottawa Startup Weekend (team Virtual Plaza)"],
             technologies: ["JavaScript", "Git", "Backbone", "jQuery, Zepto", "Python, Django", "Fabric", "HTML, Jade", "CSS, Sass, Compass", "Nginx", "GNU/Linux", "Bash, Zsh"]
