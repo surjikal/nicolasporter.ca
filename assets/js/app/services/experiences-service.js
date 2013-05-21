@@ -4,7 +4,7 @@
     return [
       {
         location: '42',
-        position: 'Lead Software Developer',
+        position: 'CTO - Chief Technology Overlord',
         terms: [
           {
             duration: {
