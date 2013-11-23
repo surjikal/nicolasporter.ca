@@ -11,7 +11,7 @@
               start: 'February 2013',
               stop: 'Current'
             },
-            tasks: ["Crafted a framework for creating native-like mobile web apps very quickly", "Built an analytics dashboard featuring a cache-manifest-based offline mode", "Designed a distributed architecture where many specialized processes act as independent web services", "Finalist at the first Fashion Hackathon in NYC, presented the product on the runway during NYC Fashion Week"],
+            tasks: ["I type a lot."],
             technologies: ["JavaScript", "AngularJS", "Node.js, Express", "Git", "jQuery, Zepto", "Fabric", "HTML, Jade", "CSS, Sass, Compass", "Nginx", "GNU/Linux", "Bash, Zsh"]
           }
         ]
